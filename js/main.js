@@ -4,6 +4,11 @@ let cart = JSON.parse(localStorage.getItem("gunplahub-cart")) || [];
 const cartCount = document.getElementById("cart-count");
 
 const cartButtons = document.querySelectorAll(".add-to-cart");
+console.log("Tổng số nút:", cartButtons.length);
+console.log(
+    "Số nút nằm trong sản phẩm:",
+    document.querySelectorAll(".product-card .add-to-cart").length
+);
 
 cartButtons.forEach(function (button) {
     button.addEventListener("click", function () {
