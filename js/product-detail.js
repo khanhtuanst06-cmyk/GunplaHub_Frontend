@@ -2,7 +2,7 @@
 /* ===== DỮ LIỆU CHI TIẾT SẢN PHẨM ===== */
 const products = {
     1: {
-        name: "Gundam HG 001",
+        name: "Mô hình Gundam HG 1/144 RX-0 Unicorn Gundam 03 Phenex (Destroy Mode) (Narrative Ver.) - Bandai",
         price: 250000,
         image: "assets/images/gundam-hg-001.jpg",
         code: "HG-001",
@@ -10,41 +10,41 @@ const products = {
         description: "Mô hình Gundam HG 001 dành cho người yêu thích lắp ráp và sưu tầm."
     },
     2: {
-        name: "Gundam HG 002",
+        name: "Mô hình Gundam HG 1/144 ORX-139 Hambrabi (GQ) - Bandai",
         price: 280000,
-        image: "assets/images/gundam-hg-002.jpg",
+        image: "assets/images/gundam-hg-002.png",
         code: "HG-002",
         type: "High Grade (HG)",
         description: "Mô hình Gundam HG 002 phù hợp cho người yêu thích lắp ráp mô hình."
     },
     3: {
-        name: "Gundam HG 003",
+        name: "Mô hình Gundam HG 1/144 VGMM-Git01 Kabakali - Bandai",
         price: 300000,
-        image: "assets/images/gundam-hg-003.jpg",
+        image: "assets/images/gundam-hg-003.png",
         code: "HG-003",
         type: "High Grade (HG)",
         description: "Mô hình Gundam HG 003 dành cho bộ sưu tập Gundam của bạn."
     },
     4: {
-        name: "Gundam HG 004",
+        name: "Mô hình Gundam HG 1/144 NMX-004 Qubeley Papillon - Bandai",
         price: 320000,
-        image: "assets/images/gundam-hg-004.jpg",
+        image: "assets/images/gundam-hg-004.png",
         code: "HG-004",
         type: "High Grade (HG)",
         description: "Mô hình Gundam HG 004 dành cho người đam mê mô hình robot."
     },
     5: {
-        name: "Gundam HG 005",
+        name: "Mô hình Gundam HG 1/144 GX-9999 Gundam X Maoh - Bandai",
         price: 350000,
-        image: "assets/images/gundam-hg-005.jpg",
+        image: "assets/images/gundam-hg-005.png",
         code: "HG-005",
         type: "High Grade (HG)",
         description: "Mô hình Gundam HG 005 phù hợp để lắp ráp và trưng bày."
     },
     6: {
-        name: "Gundam HG 006",
+        name: "Mô hình Gundam HG 1/144 MS-06R-AB Zaku Amazing - Bandai",
         price: 380000,
-        image: "assets/images/gundam-hg-006.jpg",
+        image: "assets/images/gundam-hg-006.png",
         code: "HG-006",
         type: "High Grade (HG)",
         description: "Mô hình Gundam HG 006 dành cho người yêu thích sưu tầm."

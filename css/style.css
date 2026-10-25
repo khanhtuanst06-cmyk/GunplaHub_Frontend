@@ -8,10 +8,23 @@
     --footer-text-color: #ced4da;
 }
 
+html,
+body {
+    min-height: 100%;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #222;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 /* ===== LOGO ===== */
@@ -146,4 +159,13 @@ header h2 {
     font-weight: bold;
     padding: 12px 24px;
     border-radius: 8px;
+}
+/* Điều chỉnh kích thước ảnh sản phẩm */
+.product-card .card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 0;
+    background: #fff;
 }

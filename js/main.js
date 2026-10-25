@@ -3,6 +3,34 @@ let cart = JSON.parse(localStorage.getItem("gunplahub-cart")) || [];
 
 const cartCount = document.getElementById("cart-count");
 
+function updateCartCount() {
+    const currentCart = JSON.parse(
+        localStorage.getItem("gunplahub-cart")
+    ) || [];
+
+    const countElement = document.getElementById("cart-count");
+
+    if (countElement) {
+        countElement.textContent = currentCart.reduce(function (sum, product) {
+            return sum + product.quantity;
+        }, 0);
+    }
+}
+
+updateCartCount();
+
+window.addEventListener("pageshow", function () {
+    updateCartCount();
+});
+
+window.addEventListener("storage", function (event) {
+    if (event.key === "gunplahub-cart") {
+        updateCartCount();
+    }
+});
+
+
+
 const cartButtons = document.querySelectorAll(".add-to-cart");
 console.log("Tổng số nút:", cartButtons.length);
 console.log(
@@ -38,9 +66,11 @@ if (existingProduct) {
 
 localStorage.setItem("gunplahub-cart", JSON.stringify(cart));
 
-cartCount.textContent = cart.reduce(function (sum, product) {
-    return sum + product.quantity;
-}, 0);
+if (cartCount) {
+    cartCount.textContent = cart.reduce(function (sum, product) {
+        return sum + product.quantity;
+    }, 0);
+}
 
 renderCart();
 
@@ -94,13 +124,18 @@ cart.forEach(function (product) {
     deleteButton.textContent = "Xóa";
 
     deleteButton.addEventListener("click", function () {
-        cart = cart.filter(function (item) {
-    return item.name !== product.name;
-});
-
+        if (product.quantity > 1) {
+            product.quantity -= 1;
+        } else {
+            cart = cart.filter(function (item) {
+                return item.name !== product.name;
+            });
+        }
+    
         localStorage.setItem("gunplahub-cart", JSON.stringify(cart));
+    
         renderCart();
-
+    
         if (cartCount) {
             cartCount.textContent = cart.reduce(function (sum, item) {
                 return sum + item.quantity;
@@ -166,3 +201,4 @@ if (searchForm && searchInput) {
         });
     });
 }
+renderCart();
