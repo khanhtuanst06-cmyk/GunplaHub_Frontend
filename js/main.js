@@ -40,6 +40,10 @@ console.log(
 
 cartButtons.forEach(function (button) {
     button.addEventListener("click", function () {
+
+        // Đọc lại giỏ hàng mới nhất trước khi thêm sản phẩm
+        cart = JSON.parse(localStorage.getItem("gunplahub-cart")) || [];
+        
         const productCard = button.closest(".product-card");
         const productName = productCard.querySelector(".card-title").textContent;
 
